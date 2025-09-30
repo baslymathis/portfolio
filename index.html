@@ -14,67 +14,89 @@
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #e0c3fc; /* mauve clair */
             color: #333;
             line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Petits designs sur les côtés */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 0;
+        }
+
+        body::before {
+            top: 50px;
+            left: -50px;
+        }
+
+        body::after {
+            bottom: 50px;
+            right: -50px;
         }
 
         header {
-            background-color: #fff;
-            padding: 50px 20px;
+            background-color: rgba(255,255,255,0.8);
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+            margin: 50px auto;
+            max-width: 800px;
         }
 
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: #5a2d82;
         }
 
         header p {
-            font-size: 1.2em;
-            color: #666;
+            font-size: 1.3em;
+            color: #4a1d6e;
         }
 
         main {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 0 20px;
-        }
-
-        section {
-            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
         }
 
         section h2 {
             font-size: 2em;
             margin-bottom: 20px;
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #5a2d82;
             display: inline-block;
             padding-bottom: 5px;
         }
 
-        .project {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .project h3 {
-            margin-bottom: 10px;
+        section p {
+            font-size: 1.1em;
+            color: #333;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            margin-top: 50px;
+            color: #4a1d6e;
+            position: relative;
+            z-index: 1;
         }
 
         a {
-            color: #007bff;
+            color: #5a2d82;
             text-decoration: none;
         }
 
@@ -82,7 +104,6 @@
             text-decoration: underline;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
@@ -103,19 +124,7 @@
     <main>
         <section id="presentation">
             <h2>Présentation</h2>
-            <p>Salut ! Je m'appelle Mathis Basly, je vis en Nouvelle-Calédonie et je prépare mon avenir dans le design. J'adore créer des projets propres, modernes et visuellement attrayants. Ce portfolio présente mes projets personnels et mes idées créatives.</p>
-        </section>
-
-        <section id="projets">
-            <h2>Projets</h2>
-            <div class="project">
-                <h3>Projet 1</h3>
-                <p>Description du projet 1. Tu peux ajouter des images ou des liens ici.</p>
-            </div>
-            <div class="project">
-                <h3>Projet 2</h3>
-                <p>Description du projet 2. Simple et clean, comme tu voulais.</p>
-            </div>
+            <p>Salut ! Je m'appelle Mathis Basly, je vis en Nouvelle-Calédonie et je prépare mon avenir dans le design. J'adore créer des projets propres, modernes et visuellement attrayants. Ce portfolio présente mes idées créatives et mon univers de designer.</p>
         </section>
     </main>
 
