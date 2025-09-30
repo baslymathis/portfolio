@@ -5,91 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basly Mathis</title>
     <style>
-        /* Reset et base */
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #e0c3fc; /* mauve clair */
-            color: #333;
-            line-height: 1.6;
-            position: relative;
             min-height: 100vh;
+            background: linear-gradient(135deg, #e0c3fc, #f9c5d1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Petits designs sur les côtés */
-        body::before, body::after {
-            content: '';
+        /* Formes décoratives */
+        .circle {
             position: absolute;
-            width: 150px;
-            height: 150px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255,255,255,0.2);
             z-index: 0;
         }
 
-        body::before {
-            top: 50px;
-            left: -50px;
+        .circle.one {
+            width: 250px;
+            height: 250px;
+            top: -80px;
+            left: -80px;
         }
 
-        body::after {
-            bottom: 50px;
-            right: -50px;
+        .circle.two {
+            width: 200px;
+            height: 200px;
+            bottom: -70px;
+            right: -70px;
         }
 
         header {
-            background-color: rgba(255,255,255,0.8);
-            padding: 80px 20px;
             text-align: center;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 80px 20px 40px;
             position: relative;
             z-index: 1;
-            margin: 50px auto;
-            max-width: 800px;
         }
 
         header h1 {
-            font-size: 2.8em;
-            margin-bottom: 15px;
-            color: #5a2d82;
+            font-size: 3em;
+            color: #4a1d6e;
+            margin-bottom: 10px;
         }
 
         header p {
             font-size: 1.3em;
-            color: #4a1d6e;
+            color: #333;
         }
 
         main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
             position: relative;
             z-index: 1;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
 
-        section h2 {
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .card h2 {
             font-size: 2em;
             margin-bottom: 20px;
+            color: #5a2d82;
             border-bottom: 2px solid #5a2d82;
             display: inline-block;
             padding-bottom: 5px;
         }
 
-        section p {
+        .card p {
             font-size: 1.1em;
-            color: #333;
+            color: #444;
+            line-height: 1.8;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            margin-top: 50px;
             color: #4a1d6e;
             position: relative;
             z-index: 1;
@@ -98,6 +106,7 @@
         a {
             color: #5a2d82;
             text-decoration: none;
+            font-weight: 600;
         }
 
         a:hover {
@@ -106,26 +115,34 @@
 
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
-
-            section h2 {
-                font-size: 1.5em;
+            .card {
+                padding: 25px;
+            }
+            .card h2 {
+                font-size: 1.6em;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Formes décoratives -->
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+
     <header>
         <h1>Mathis Basly</h1>
         <p>Futur designer | Passionné par le design et le web</p>
     </header>
 
     <main>
-        <section id="presentation">
+        <div class="card">
             <h2>Présentation</h2>
-            <p>Salut ! Je m'appelle Mathis Basly, je vis en Nouvelle-Calédonie et je prépare mon avenir dans le design. J'adore créer des projets propres, modernes et visuellement attrayants. Ce portfolio présente mes idées créatives et mon univers de designer.</p>
-        </section>
+            <p>Salut ! Je m'appelle <strong>Mathis Basly</strong>, je vis en Nouvelle-Calédonie et je prépare mon avenir dans le design. 
+            J'adore créer des projets modernes, minimalistes et visuellement impactants. 
+            Ce portfolio est une vitrine de mon univers créatif et de ma passion pour le design.</p>
+        </div>
     </main>
 
     <footer>
